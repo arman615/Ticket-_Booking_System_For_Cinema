@@ -1,24 +1,12 @@
-#include "Movie.h"
+#include "User.h"
 
-Movie::Movie(const std::string& title, int duration, const std::string& rating)
-    : title(title), duration(duration), rating(rating) {}
+User::User(const std::string& name, const std::string& contactInfo)
+    : name(name), contactInfo(contactInfo) {}
 
-const std::string& Movie::getTitle() const {
-    return title;
+const std::string& User::getName() const {
+    return name;
 }
 
-int Movie::getDuration() const {
-    return duration;
-}
-
-const std::string& Movie::getRating() const {
-    return rating;
-}
-
-const std::vector<std::string>& Movie::getShowtimes() const {
-    return showtimes;
-}
-
-void Movie::addShowtime(const std::string& showtime) {
-    showtimes.push_back(showtime);
+const std::string& User::getContactInfo() const {
+    return contactInfo;
 }
